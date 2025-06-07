@@ -319,13 +319,19 @@ nav ul li a:hover {
     height: 510px;
     width: 555px;
     margin: 20px;
+    margin-left: 58px; /*  Adjust this value to move box to left */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Required if ul is absolutely positioned inside */
 }
 
 .social-menu ul {
     position: absolute;
     display: flex;   
-    margin: 15px;
-    padding-top: 150px;
+    margin: 0;
+    padding: 0;
 }
 
 .social-menu ul li {
