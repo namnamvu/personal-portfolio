@@ -2,10 +2,17 @@ import express from 'express';
 import helmet from 'helmet'
 import morgan from 'morgan';
 import cors from 'cors';
+import dotenv from 'dotenv'
+import contactRoutes from './routes/contactRoutes.js'
+
+// Allow PORt to be used fron .env
+dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+// Allow frontend to interact with backend without getting block by cors
 app.use(cors());
 
 // Security amiddleware to protect app by setting HTTP headers
@@ -13,11 +20,8 @@ app.use(helmet());
 // Log the request
 app.use(morgan("dev"));
 
-app.get("/test", (req, res) => {
-    console.log(res.getHeaders())
-    res.send("Hello from the backend")
-});
+app.use('/api/contact', contactRoutes)
 
-app.listen(3000, () => {
-    console.log("Server is runnning on this port")
+app.listen(PORT, () => {
+    console.log("Server is runnning on port " + PORT)
 });
