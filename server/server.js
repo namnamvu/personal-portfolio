@@ -8,6 +8,7 @@ import contactRoutes from './routes/contactRoutes.js'
 // Allow PORT to be used fron .env
 dotenv.config();
 
+// Create an instance of express app
 const app = express();
 const PORT = process.env.PORT || 3000;
 
