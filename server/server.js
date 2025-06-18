@@ -5,7 +5,7 @@ import cors from 'cors';
 import dotenv from 'dotenv'
 import contactRoutes from './routes/contactRoutes.js'
 
-// Allow PORt to be used fron .env
+// Allow PORT to be used fron .env
 dotenv.config();
 
 const app = express();
