@@ -13,7 +13,6 @@ const pool = new Pool({
   });
   // Check for success
   pool.on('connect', () => console.log('Connected to PostgreSQL'));
-  
   pool.on('error', (err) => {
     console.error('❌ Unexpected database error', err);
     throw new AppError.INTERNAL_ERROR('Database connection failed');
