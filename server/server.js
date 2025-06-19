@@ -10,7 +10,7 @@ dotenv.config();
 
 // Create an instance of express app
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 // Allow frontend to interact with backend without getting block by cors
@@ -25,4 +25,5 @@ app.use('/api/contact', contactRoutes)
 
 app.listen(PORT, () => {
     console.log("Server is runnning on port " + PORT)
+    console.log(`Environment: ${process.env.NODE_ENV}`);
 });

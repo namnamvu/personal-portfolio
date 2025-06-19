@@ -2,7 +2,5 @@ import express from 'express'
 
 const router = express.Router();
 
-router.get('/test', (req, res) => {
-    res.send('Test route');
-});
+router.get('/api/contacts', getAllContacts());
 export default router;
