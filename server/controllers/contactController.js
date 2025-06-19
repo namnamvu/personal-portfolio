@@ -1,2 +1,58 @@
-export const getAllContacts = (req, res) => {};
-export const createContacts = (req, res) => {};
+import Contact from '../models/Contact.js';
+import catchAsync from '../utils/catchAsync.js';
+
+// Create new contact from form submission
+export const createContact = catchAsync(async (req, res) => {
+  const contact = await Contact.create(req.body);
+  
+  res.status(201).json({
+    success: true,
+    message: 'Message sent successfully!',
+    data: {
+      contact_id: contact.contact_id,
+      name: contact.name,
+      email: contact.email,
+      created_at: contact.created_at
+    }
+  });
+});
+
+// Get all contacts (for admin/dashboard)
+export const getAllContacts = catchAsync(async (req, res) => {
+  const contacts = await Contact.findAll();
+
+  res.status(200).json({
+    success: true,
+    data: contacts
+  });
+});
+
+// Mark contact as read
+export const markAsRead = catchAsync(async (req, res) => {
+  const contact = await Contact.markAsRead(req.params.contactId);
+  
+  res.status(200).json({
+    success: true,
+    data: contact
+  });
+});
+
+// Mark contact as replied
+export const markAsReplied = catchAsync(async (req, res) => {
+  const contact = await Contact.markAsReplied(req.params.contactId);
+  
+  res.status(200).json({
+    success: true,
+    data: contact
+  });
+});
+
+// Delete contact
+export const deleteContact = catchAsync(async (req, res) => {
+  await Contact.delete(req.params.contactId);
+  
+  res.status(200).json({
+    success: true,
+    message: 'Contact deleted successfully'
+  });
+});
