@@ -19,3 +19,5 @@ export const errors = {
   CONFLICT: (message = 'Resource conflict') => new AppError(message, 409),
   INTERNAL_ERROR: (message = 'Internal server error') => new AppError(message, 500)
 };
+
+export default AppError;

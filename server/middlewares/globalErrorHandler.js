@@ -1,4 +1,4 @@
-import { AppError } from './AppError.js';
+import { AppError } from '../utils/AppError.js';
 
 const handlePostgresError = (err) => {
   const pgErrorMap = {
@@ -43,6 +43,7 @@ export const globalErrorHandler = (err, req, res, next) => {
   
   res.status(err.statusCode).json({
     status: err.status,
+    // If its operational problem, we return using AppError, otherwise output string
     message: err.isOperational ? err.message : 'Something went wrong',
     ...(isDevelopment && {
       error: {
