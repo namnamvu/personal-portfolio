@@ -14,13 +14,7 @@ async function testCreateContact() {
 
   try {
     console.log('⏳ Running test...');
-    
-    // Option 1: If create is a STATIC method (recommended)
     result = await Contact.create(testContact);
-    
-    // Option 2: If create is an INSTANCE method (less common)
-    // const contact = new Contact();
-    // result = await contact.create(testContact);
     
     console.log('✔️ Returned data:', result);
     
