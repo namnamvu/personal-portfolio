@@ -7,7 +7,7 @@ export const createContact = catchAsync(async (req, res) => {
   
   res.status(201).json({
     success: true,
-    message: 'Message sent successfully!',
+    message: 'A new contact is created successfully',
     data: {
       contact_id: contact.contact_id,
       name: contact.name,
@@ -26,6 +26,17 @@ export const getAllContacts = catchAsync(async (req, res) => {
     data: contacts
   });
 });
+
+export const updateContact = catchAsync(async (req, res) => {
+    const updated = await Contact.update(req.params.contactId, req.body);
+
+    res.status(200).json({
+        success: true,
+        message: 'Contact updated successfully',
+        data: updated
+    });
+});
+  
 
 // Mark contact as read
 export const markAsRead = catchAsync(async (req, res) => {
