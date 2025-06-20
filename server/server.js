@@ -5,18 +5,20 @@ import helmet from 'helmet'
 import morgan from 'morgan';
 import cors from 'cors';
 import contactRoutes from './routes/contactRoutes.js'
+import { config } from './config/config.js';
 
 
 // Create an instance of express app
 const app = express();
 const PORT = process.env.PORT || 5001;
 
+// Middleware needed to parse json request from client
 app.use(express.json());
 
 // Allow frontend to interact with backend without getting block by cors
 app.use(cors({
-    origin: 'http://localhost:3000', // Your Vite frontend
-    methods: ['GET', 'POST', 'OPTIONS'],
+    origin: config.cors.origin, // Frontend link
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     credentials: false
   }));
 
