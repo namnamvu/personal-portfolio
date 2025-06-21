@@ -1,12 +1,13 @@
 import React from 'react';
-import Portfolio from './components/Portfolio'
+import Navbar from './components/Navbar';
+import HomePage from './pages/HomePage';
 
-function App() {
-  return (
-    <div className="App">
-      hey
-    </div>
-  )
-}
+const App = () => (
+  <>
+    <Navbar />
+    <HomePage />
+    <h1>Test file</h1>
+  </>
+);
 
 export default App;
