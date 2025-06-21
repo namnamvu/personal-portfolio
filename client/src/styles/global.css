@@ -11,9 +11,10 @@ body {
 
 .navbar {
   display: flex;
+  font-weight: bold;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 0rem 3rem;
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(6px);
   position: sticky;
@@ -22,8 +23,9 @@ body {
 }
 
 .logo {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.7rem;
+  letter-spacing: 1px;
+  font-style: italic;
 }
 
 .aqua {
@@ -33,16 +35,18 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 .nav-links a {
+  font-size: 1.4rem;
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-weight: bold;
 }
 
 .nav-links a:hover {
-  color: aqua;
+    color: aqua;
+    border-bottom: 2px solid aqua;
+    transition: .3s;
 }
