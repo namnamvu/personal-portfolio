@@ -1,6 +1,7 @@
 server/node_modules
 .vscode/
 server/.env
+.DS_Store
 # Dependencies
 node_modules/
 client/node_modules/
