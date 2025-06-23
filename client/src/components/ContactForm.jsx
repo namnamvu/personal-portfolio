@@ -25,17 +25,13 @@ const ContactForm = () => {
       alert('Message sent!');
       setFormData({ name: '', phone: '', message: '' });
     } catch (err) {
+      console.error('Error sending message:', err); // Add this for debugging
       alert('Failed to send message.');
     }
   };
 
   return (
-    <section className="contact-me" id="link-to-contact">
-      <div className="section-title">
-        <h2>CONTACT ME</h2>
-      </div>
-      <div className="content-box">
-        <div className="contact-card">
+        <div className="form-card">
           <div className="contact-heading">
             <h3>By Form</h3>
           </div>
@@ -50,8 +46,6 @@ const ContactForm = () => {
             </form>
           </div>
         </div>
-      </div>
-    </section>
   );
 };
 

@@ -3,8 +3,7 @@ import Navbar from '../components/Navbar';
 import Intro from '../components/Intro';
 import About from '../components/About';
 import Projects from '../components/Projects';
-import ContactForm from '../components/ContactForm';
-import SocialLinks from '../components/SocialLinks';
+import Contact from '../components/Contact';
 
 const HomePage = () => (
   <>
@@ -14,8 +13,7 @@ const HomePage = () => (
     </div>
     <About />
     <Projects />
-    <ContactForm />
-    <SocialLinks />
+    <Contact></Contact>
   </>
 );
 

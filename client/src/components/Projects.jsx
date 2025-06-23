@@ -5,9 +5,9 @@ import mealplan from "../images/MealPlanApp.png"
 import testfw from "../images/TestResult.png"
 
 const Projects = () => (
-  <section className="project">
+  <section className="project" id = "project">
     <div className="section-title">
-      <h2 id="project">MY PROJECTS</h2>
+      <h2>MY PROJECTS</h2>
     </div>
     <div className="box">
       <ProjectCard
