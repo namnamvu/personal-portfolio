@@ -75,6 +75,11 @@ body {
   align-items: center;
   justify-content: space-between; /* this does the magic */
 }
+/* Change color when scroll*/
+.navbar-scrolled {
+  background-color: rgba(0, 0, 0, 0.9); /* Solid-ish dark blue */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional elevation */
+}
 
 .logo {
     font-size: 2.2rem;
@@ -243,7 +248,7 @@ background-color: lightblue;
 /* =============== ABOUT SECTION =============== */
 
 .About {
-  padding: 4rem 6rem;
+  padding: 4rem 2rem;
   color: white;
   background: linear-gradient(to bottom right, #0a1f44, #000000);
   height: 100vh;
@@ -255,8 +260,8 @@ background-color: lightblue;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  max-width: 900px;
+  gap: 9rem;
+  max-width: 1800px;
   margin: 0 auto;
 }
 
@@ -318,10 +323,15 @@ background-color: lightblue;
 /* =============== PROJECT SECTION =============== */
 
 .project {
+  min-height: 100vh;       /* Full viewport height */
   padding: 4rem 2rem;
   text-align: center;
+  scroll-margin-top: 80px;
 }
-
+.section-title {
+  text-align: center;
+  width: 100%;
+}
 .section-title h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -348,6 +358,8 @@ background-color: lightblue;
 
 .card img {
   width: 100%;
+  height: 180px;     
+  object-fit: cover;  
   border-radius: 8px;
   margin-bottom: 0.75rem;
 }
@@ -367,92 +379,159 @@ background-color: lightblue;
   font-weight: 500;
 }
 
-/* =============== CONTACT SECTION =============== */
-
+/* ========== PAGE BACKGROUND ========== */
 .contact-me {
-  padding: 4rem 2rem;
-  text-align: center;
+  background-color: black;
+  width: 100%;
+  padding: 60px 0;
+  color: white;
+  margin: 0 auto;
+}
+#link-to-contact {
+  scroll-margin-top: 20px;
 }
 
-.contact-card {
-  margin-bottom: 2rem;
+/* ========== FLEX LAYOUT ========== */
+.contact-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.contact-heading h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+/* ========== CONTACT FORM CARD SIDE ========== */
+.form-card {
+  margin-right: 100px;
+}
+
+.contact-form {
+  height: 380px;
+  width: 420px;
+  background: #191919;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px 0 rgb(138, 137, 137);
 }
 
 .contact-form form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  margin: 30px;
+  padding-left: 5px;
 }
 
 .contact-input {
-  width: 100%;
-  max-width: 400px;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
+  width: 352px;
+  height: 40px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 14px;
+  font-size: 15px;
 }
 
 .message-input {
-  height: 120px;
-  resize: none;
+  height: 100px;
+  padding-top: 10px;
+}
+
+#send {
+  text-align: center;
+}
+
+#send input {
+  font-size: 20px;
+  border: 2px solid #00e8eb;
+  padding: 15px 50px;
+  border-radius: 30px;
+  transition: 0.4s;
+  background-color: #191919;
+  color: #15f4ee;
+  letter-spacing: 5px;
+}
+
+#send input:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 0 #15f4ee;
 }
 
 #send input[type="submit"] {
-  padding: 0.6rem 1.5rem;
-  background-color: aqua;
-  color: black;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  cursor: grab;
 }
 
-#send input[type="submit"]:hover {
-  opacity: 0.85;
+#send input[type="submit"]:active {
+  cursor: grabbing;
 }
 
-/* =============== SOCIAL LINKS =============== */
 
-.social-menu ul {
-  list-style: none;
+/* ========== SOCIAL LINKS SIDE ========== */
+.social-holder {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  padding: 0;
+  align-items: center;
+  width: 555px;
+  height: 510px;
+  position: relative;
+  margin: 20px 0;
 }
 
-.social-menu a {
-  color: white;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
+.social-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.social-menu a:hover {
+
+.contact-heading {
+  text-align: center;
+  font-size: 30px;
   color: aqua;
+  margin-bottom: 50px;
 }
 
-/* =============== RESPONSIVE MEDIA QUERIES =============== */
+.social-menu {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-  }
+.social-menu ul {
+  position: relative;
+  display: flex;
+  justify-content: center; /* center the entire list */
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+}
 
-  .content-box {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .box {
-    flex-direction: column;
-    align-items: center;
-  }
+.social-menu ul li {
+  list-style-type: none;
+  text-align: center;
+  margin: 10px;
+}
+
+.social-menu ul li a {
+  position: relative;
+  display: flex;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px #15f4ee;
+  transition: 0.4s;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-menu ul li a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px 10px #15f4ee;
+}
+/* When using svg, the flex in display above will center the icon*/
+.social-menu ul li a svg {
+  width: 40px;
+  height: 40px;
+  color: black;
 }
