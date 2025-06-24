@@ -1,9 +1,12 @@
 import React from 'react';
 import HomePage from './pages/HomePage';
+import MouseLightEffect from './components/MouseLightEffect';
 
 const App = () => (
   <>
-    <HomePage />
+    <MouseLightEffect>
+      <HomePage />
+    </MouseLightEffect>
   </>
 );
 

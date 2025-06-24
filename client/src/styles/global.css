@@ -13,9 +13,9 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: white;
-  background: linear-gradient(to bottom right, #0a1f44, #000000);
+  background: black
 }
-
+/* Wrapper for the Background image at the start of the portfolio*/
 .hero-wrapper {
     background-image: url('../images/Background.jpg'); /* adjust path */
     background-size: cover;
@@ -34,19 +34,14 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(24, 24, 24, 0.9),rgba(22, 22, 22, 0.4)); /* semi-transparent dark overlay */
+    background: linear-gradient(rgba(24, 24, 24, 0.9),rgba(22, 22, 22, 0.4));   
+    /* semi-transparent dark overlay */
     z-index: 0;
   }
   .hero-wrapper {
     position: relative;
     z-index: 1;
   }
-
-.Intro {
-  position: relative;
-  z-index: 2;
-}
-
   
 
 /* =============== NAVBAR =============== */
@@ -250,7 +245,7 @@ background-color: lightblue;
 .About {
   padding: 4rem 2rem;
   color: white;
-  background: linear-gradient(to bottom right, #0a1f44, #000000);
+  /* background: linear-gradient(to bottom right, #0a1f44, #000000); */
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -381,7 +376,7 @@ background-color: lightblue;
 
 /* ========== PAGE BACKGROUND ========== */
 .contact-me {
-  background-color: black;
+  /* background-color: black; */
   width: 100%;
   padding: 60px 0;
   color: white;
