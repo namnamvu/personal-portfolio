@@ -15,9 +15,9 @@ const MouseLightEffect = ({ children }) => {
           overflow: 'hidden',   
           background: `
             radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, 
-              rgba(255,255,255,0.1) 0%, 
+              rgba(255,255,255,0.14) 0%, 
               rgba(255,255,255,0.05) 200px, 
-              transparent 600px
+              transparent 1500px
             )
           `
         }}
