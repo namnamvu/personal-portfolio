@@ -10,7 +10,7 @@ const Intro = () => {
                 <h1>NAM VU</h1>
                 <h2 style={{ color: 'white' }}>Software Engineer</h2>  
                 <a href="#about-me" onClick={scrollTo('about-me')} className="about-link">
-                    About me ↓
+                    About me
                 </a>
             </div>
             <div className="image-wrapper">

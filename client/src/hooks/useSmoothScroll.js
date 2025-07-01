@@ -1,5 +1,5 @@
 // hooks/useSmoothScroll.js
-export const useSmoothScroll = () => {
+export const useSmoothScroll = (scrollContainerRef) => {
   return (id) => (e) => {
     e.preventDefault();
     const el = document.getElementById(id);

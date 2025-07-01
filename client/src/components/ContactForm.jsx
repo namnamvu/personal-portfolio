@@ -33,7 +33,7 @@ const ContactForm = () => {
   return (
         <div className="form-card">
           <div className="contact-heading">
-            <h3>By Form</h3>
+            <h3>Form</h3>
           </div>
           <div className="contact-form">
             <form onSubmit={handleSubmit}>

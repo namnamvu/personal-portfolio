@@ -1,0 +1,126 @@
+/* src/components/EnlargedProjectPopup/EnlargedProjectPopup.module.css */
+.popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .popupContent {
+    background-color: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(71, 85, 105, 0.7);
+    box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    position: relative;
+    cursor: default;
+  }
+  
+  .popupImage {
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .popupTitle {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 0.025em;
+  }
+  
+  .popupDescription {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #cbd5e1;
+  }
+  
+  .githubLink {
+    color: #3B82F6;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: #cbd5e1;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+  }
+  
+  .closeButton:hover {
+    background-color: rgba(71, 85, 105, 0.3);
+  }
+  
+  .navButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0.8;
+  }
+  
+  .navButtonLeft {
+    left: 20px;
+  }
+  
+  .navButtonRight {
+    right: 20px;
+  }
+  
+  .navButton:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+
+  

@@ -10,7 +10,7 @@ const SocialLinks = () => (
   <div className="social-holder">
     <div className="social-column">
         <div className="contact-heading">
-        <h3>By other media</h3>
+        <h3>Other media</h3>
         </div>
         <div className="social-menu">
         <ul>
