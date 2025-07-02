@@ -1,7 +1,6 @@
 // test/Contacts.test.js
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { Contact } from '../models/Contact.js';
-import { errors } from '../utils/AppError.js';
 
 // Mock the PostgreSQL pool
 vi.mock('../config/database.js', () => ({

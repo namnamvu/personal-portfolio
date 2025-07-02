@@ -1,40 +1,54 @@
 import 'dotenv/config';
 
 import express from 'express';
-import helmet from 'helmet'
+import helmet from 'helmet';
 import morgan from 'morgan';
 import cors from 'cors';
-import contactRoutes from './routes/contactRoutes.js'
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+import contactRoutes from './routes/contactRoutes.js';
 import { config } from './config/config.js';
 
-
-// Create an instance of express app
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-// Middleware needed to parse json request from client
+// Fix __dirname for ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Middleware
 app.use(express.json());
 
-// Allow frontend to interact with backend without getting block by cors
 app.use(cors({
-    origin: config.cors.origin, // Frontend link
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    credentials: false
-  }));
+  origin: config.cors.origin,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  credentials: false,
+}));
 
-// Security amiddleware to protect app by setting HTTP headers
 app.use(helmet());
-// Log the request
-app.use(morgan("dev"));
+app.use(morgan('dev'));
 
-app.use('/api/contact', contactRoutes)
+// API routes
+app.use('/api/contact', contactRoutes);
 
-// Add a test root route
-app.get('/', (req, res) => {
-    res.send('Server is running');
-  });  
+if (process.env.NODE_ENV === 'production') {
+  // Serve static frontend
+  app.use(express.static(path.join(__dirname, 'dist')));
+
+  // SPA fallback for React Router (only in production)
+  app.get('/{*splat}', (req, res, next) => {
+    console.log('Fallback route triggered for:', req.originalUrl);
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  });
+} else {
+  // Local test route
+  app.get('/', (req, res) => {
+    res.send('Server is running locally');
+  });
+}
 
 app.listen(PORT, () => {
-    console.log("Server is runnning on port " + PORT)
-    console.log(`Environment: ${process.env.NODE_ENV}`);
+  console.log(`✅ Server running on port ${PORT}`);
+  console.log(`🧠 Environment: ${process.env.NODE_ENV}`);
 });
