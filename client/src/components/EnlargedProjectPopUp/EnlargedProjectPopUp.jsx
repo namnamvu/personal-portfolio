@@ -1,7 +1,7 @@
 // src/components/EnlargedProjectPopup/EnlargedProjectPopup.jsx
 import React, { useEffect, useCallback, useRef } from 'react'; // Import useRef
 import { motion, AnimatePresence } from 'framer-motion'; // Import AnimatePresence
-import styles from './EnlargedProjectPopup.module.css';
+import styles from './EnlargedProjectPopUp.module.css';
 
 const EnlargedProjectPopup = ({ project, onClose, onNavigate, hasNext, hasPrev }) => {
   // Use a ref to manage throttling for wheel events
