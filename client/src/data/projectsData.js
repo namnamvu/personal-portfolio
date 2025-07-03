@@ -39,35 +39,35 @@ const projects = [
       description: "A Java program that solves mazes using stack (DFS) and queue (BFS) data structures. It features a graphical user interface for visualizing the maze and the solving process",
       image: mazeSolve,
       githubLink: "https://github.com/namnamvu/mazeSolving"
-    },
-    {
-      id: 7,
-      title: "Voice Command Interface",
-      description: "Natural language processing system for hands-free application control, enhancing accessibility and user interaction with various software platforms.",
-      image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=400&h=300&fit:crop",
-      githubLink: "#"
-    },
-    {
-      id: 8,
-      title: "Robotic Process Automation",
-      description: "Intelligent automation framework for streamlining repetitive business tasks, improving efficiency and reducing manual effort in enterprise workflows.",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop",
-      githubLink: "#"
-    },
-    {
-      id: 9,
-      title: "Biometric Security System",
-      description: "Multi-factor authentication using facial recognition and fingerprint scanning, providing robust and secure access control for sensitive data and systems.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit:crop",
-      githubLink: "#"
-    },
-    {
-      id: 10,
-      title: "Smart City Dashboard",
-      description: "IoT integration platform for monitoring urban infrastructure and services, offering real-time data on traffic, energy, and environmental conditions for smart city management.",
-      image: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=400&h=300&fit=crop",
-      githubLink: "#"
     }
+    // {
+    //   id: 7,
+    //   title: "Voice Command Interface",
+    //   description: "Natural language processing system for hands-free application control, enhancing accessibility and user interaction with various software platforms.",
+    //   image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=400&h=300&fit:crop",
+    //   githubLink: "#"
+    // },
+    // {
+    //   id: 8,
+    //   title: "Robotic Process Automation",
+    //   description: "Intelligent automation framework for streamlining repetitive business tasks, improving efficiency and reducing manual effort in enterprise workflows.",
+    //   image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop",
+    //   githubLink: "#"
+    // },
+    // {
+    //   id: 9,
+    //   title: "Biometric Security System",
+    //   description: "Multi-factor authentication using facial recognition and fingerprint scanning, providing robust and secure access control for sensitive data and systems.",
+    //   image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit:crop",
+    //   githubLink: "#"
+    // },
+    // {
+    //   id: 10,
+    //   title: "Smart City Dashboard",
+    //   description: "IoT integration platform for monitoring urban infrastructure and services, offering real-time data on traffic, energy, and environmental conditions for smart city management.",
+    //   image: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=400&h=300&fit=crop",
+    //   githubLink: "#"
+    // }
   ];
   
   export default projects;
