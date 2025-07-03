@@ -110,7 +110,7 @@ const ProjectGallery = ({ onPopupToggle }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Scroll horizontally to explore innovative solutions and cutting-edge technologies
+          Hover on the project to scroll || Scroll in blue area to move to next page
         </motion.p>
       </div>
 
