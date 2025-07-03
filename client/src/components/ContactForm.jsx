@@ -16,7 +16,8 @@ const ContactForm = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5001/api/contact', {
+      // 'http://localhost:5001/api/contact' only for development
+      await axios.post(`${API_BASE_URL}/api/contact`, {
         name: formData.name,
         subject: 'Contact Form Submission',
         email: 'anonymous@email.com', // replace with real input later
