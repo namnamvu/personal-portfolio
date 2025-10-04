@@ -7,7 +7,7 @@ const Intro = () => {
     return (
         <div className="Intro first-page">
             <div className='Intro-text'>
-                <h1>NAM VU</h1>
+                <h1>NATHANIEL VU</h1>
                 <h2 style={{ color: 'white' }}>Software Engineer</h2>  
                 <a href="#about-me" onClick={scrollTo('about-me')} className="about-link">
                     About me

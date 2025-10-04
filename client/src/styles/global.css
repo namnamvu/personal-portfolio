@@ -181,7 +181,7 @@ transform: translateY(30px);
 color: aqua;
 letter-spacing: 0.1em;
 font-family: 'Arima', cursive;
-font-size: 110px;
+font-size: 70px;
 margin: 0;          /* Removes default margins */
   line-height: 1;     /* Removes extra space from default line height */
   padding: 0;         /* Ensures no padding adds space */
@@ -307,6 +307,7 @@ background-color: lightblue;
 }
 
 .about-text p {
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   letter-spacing: 0.05em;

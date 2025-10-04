@@ -9,7 +9,7 @@ const About = () => (
         <h2>🚀 Who I Am</h2>
         <p>
           I'm currently a Computer Science student at Franklin &amp; Marshall College.
-          My passion lies in building meaningful software and exploring how technology can empower people.
+          My passion lies in building meaningful software and exploring how technology can empower people. I also love reading fantasy books and solving rubik cubes.
         </p>
         <ul className="about-list">
           <li>💻 I love building full-stack apps from scratch</li>
