@@ -51,9 +51,25 @@ const Navbar = ({ scrollContainerRef }) => {
         // Apply 'navbar-scrolled' class when not at the top section (i.e., scroll position > 0)
         <nav className={`navbar ${!isAtTopSection ? 'navbar-scrolled' : ''}`}>
             <div className='navbar-inner'>
-                <h2 className="logo"><span className="aqua flip-bounce">Port</span>folio</h2>
+                <h2 className="logo">
+                    <span className="aqua flip-bounce">
+                        Port
+                    </span> 
+                        folio
+                </h2>
                 <ul className="nav-links">
-                    <li><a href="https://github.com/namnamvu" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li>
+                        <a href="https://github.com/namnamvu" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </li>
+                    <li>
+                        <a 
+                            href="https://drive.google.com/file/d/1dCTmKac3CAp8WfxHd7-L9sg5a5W68fdP/view?usp=drive_link" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                        >
+                            Resume
+                        </a>
+                    </li>
                     {/* <li><a href="images/me1.jpg" target="_blank" rel="noopener noreferrer">Gallery</a></li>
                     <li><a href="#project-section" onClick={scrollTo('project-section')} >Projects</a></li>
                     <li><a href="#link-to-contact" onClick={scrollTo('link-to-contact')}>Contact</a></li> */}
