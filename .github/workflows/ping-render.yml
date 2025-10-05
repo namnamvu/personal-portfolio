@@ -1,0 +1,15 @@
+name: Ping Render to keep alive
+
+on:
+  schedule:
+    - cron: '0,13,26,39,52 * * * *'
+  workflow_dispatch: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render app
+        run: |
+          URL="https://personal-portfolio-b798.onrender.com"
+          curl -fsS "$URL" -o /dev/null || echo "Ping failed"
