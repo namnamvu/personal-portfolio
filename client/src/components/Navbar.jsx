@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useSmoothScroll } from '../hooks/useSmoothScroll';
+//import { useSmoothScroll } from '../hooks/useSmoothScroll';
 
 // Accept scrollContainerRef as a prop from HomePage
 const Navbar = ({ scrollContainerRef }) => {
-    const scrollTo = useSmoothScroll();
+    //const scrollTo = useSmoothScroll();
 
     // State to determine if the navbar should be transparent (true) or black (false)
     // It should be transparent ONLY when the scroll position is exactly 0.

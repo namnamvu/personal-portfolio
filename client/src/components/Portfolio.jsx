@@ -38,7 +38,7 @@ const Portfolio = () => {
         setSubmitMessage('Failed to send message. Please try again.');
       }
     } catch (error) {
-      setSubmitMessage('Error sending message. Please try again.');
+      setSubmitMessage('Error sending message. Please try again.' + error);
     } finally {
       setIsSubmitting(false);
     }
