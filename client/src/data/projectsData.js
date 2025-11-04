@@ -3,6 +3,8 @@ import mealApp from '../images/MealPlanApp.png'
 import testFW from '../images/TestResult.png'
 import ftAnalyse from '../images/FeatureAnalysis.png'
 import mazeSolve from '../images/MazeSolver.png'
+import WatchlistTracker from '../images/WatchlistTracker.png'
+import Analytics from '../images/Analytics.png'
 
 const projects = [
     {
@@ -39,6 +41,20 @@ const projects = [
       description: "A Java program that solves mazes using stack (DFS) and queue (BFS) data structures. It features a graphical user interface for visualizing the maze and the solving process",
       image: mazeSolve,
       githubLink: "https://github.com/namnamvu/mazeSolving"
+    },
+    {
+      id: 6,
+      title: "Watchlist Tracker",
+      description: "A Watchlist Tracker lets users save, organize, and monitor movies or shows they plan to watch. It automatically create a pop up asking the users anytime they open a new website with a new movie. Perfect for keeping entertainment goals organized and up to date.",
+      image: WatchlistTracker,
+      githubLink: "https://github.com/namnamvu/Movie-tracker"
+    },
+    {
+      id: 7,
+      title: "AI Sales Analytics Platform",
+      description: "An AI Sales Analytics Platform that leverages machine learning to uncover revenue trends, predict customer behavior, and optimize sales performance. It automates data aggregation from multiple sources for real-time insights and visual dashboards.Designed to help businesses make smarter, data-driven sales decisions..",
+      image: Analytics,
+      githubLink: "https://github.com/namnamvu/AI-Sales-Analytics-Platform"
     }
     // {
     //   id: 7,

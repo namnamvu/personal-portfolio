@@ -63,7 +63,7 @@ const Navbar = ({ scrollContainerRef }) => {
                     </li>
                     <li>
                         <a 
-                            href="https://drive.google.com/file/d/1ooUGQFBf8JklOvoMzRC00_5aPg9MRxNq/view?usp=sharing" 
+                            href="https://drive.google.com/file/d/1elCc31UfgyRQ0yY4Ag4nlrVVv189UlIC/view?usp=sharing" 
                             target="_blank" 
                             rel="noopener noreferrer"
                         >
